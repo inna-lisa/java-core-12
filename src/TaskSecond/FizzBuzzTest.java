@@ -1,6 +1,6 @@
 package TaskSecond;
 
-import java.util.concurrent.*;
+import java.util.concurrent.LinkedBlockingQueue;
 
 public class FizzBuzzTest {
 	public static void main(String[] args) throws InterruptedException {
@@ -11,12 +11,11 @@ public class FizzBuzzTest {
 			numbers.put(i);
 		}
 
-		ProcessQueue processQueue= new ProcessQueue(numbers);
-
+		ProcessQueue processQueue = new ProcessQueue(numbers);
 
 		Thread threadA = new Thread(() ->
 		{
-				try {
+			try {
 					processQueue.fizz();
 				} catch (InterruptedException e) {
 					throw new RuntimeException(e);
