@@ -7,7 +7,7 @@ public class FizzBuzzTest {
 
 		LinkedBlockingQueue<Integer> numbers = new LinkedBlockingQueue<>();
 
-		for (int i = 1; i <= 33; i++) {
+		for (int i = 1; i <= 9999986 ; i++) {
 			numbers.put(i);
 		}
 
